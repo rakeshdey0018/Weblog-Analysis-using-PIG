@@ -1,5 +1,5 @@
 --using CombinedLogLoader the input logfile is loaded from HDFS locaton '/user/cloudera/input_data'. 
---Piggybank.jar is registered to keverage the UDF combinedLogLoader
+--Piggybank.jar is registered to leverage the use of UDF combinedLogLoader
 
 register '/usr/lib/pig/piggybank.jar' ;
  define CombinedLogLoader org.apache.pig.piggybank.storage.CombinedLogLoader();
@@ -13,7 +13,7 @@ log_month_specific = foreach logs_extract generate addr,SUBSTRING(time,3,6) as m
 result_quarter1 = Filter log_month_specific by month =='Oct' OR month =='Nov' OR month =='Dec';
 af = group result_quarter1 by month;
 
---genearating the result of total unique hit count of every month of that quarter based of distinct value of addr, uri both, 
+--generating the result of total unique hit count of every month of that quarter based of distinct value of addr, uri both, 
 result_quarter1_dist_byquarter =  foreach af  { 
                                                b = result_quarter1.(addr,uri);
                                                s = DISTINCT b; 
