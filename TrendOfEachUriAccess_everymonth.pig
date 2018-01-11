@@ -1,5 +1,5 @@
 --using CombinedLogLoader the input logfile is loaded from HDFS locaton '/user/cloudera/input_data'. 
---Piggybank.jar is registered to keverage the UDF combinedLogLoader
+--Piggybank.jar is registered to leverage the use of  UDF combinedLogLoader
 
 register '/usr/lib/pig/piggybank.jar' ;
  define CombinedLogLoader org.apache.pig.piggybank.storage.CombinedLogLoader();
