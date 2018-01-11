@@ -1,5 +1,5 @@
 # Weblog-Analysis-using-PIG
- [BigData] one year weblog analysis using PIG
+ [BigData] weblog analysis on  one year data using PIG
  
  This repository consists of multiple PIG scripts to do detailed analysis of one year weblog  and make it visualize with Tableau.
  
